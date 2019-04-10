@@ -1,0 +1,22 @@
+//初始化
+git init
+//删除远程连接
+$ git remote rm origin
+//建立远程连接
+$ git remote add origin git@github.com:zxccong/eshop-myconfig.git
+//更新远程分支信息到本地
+$ git fetch origin
+
+
+
+//添加
+git add *
+
+//提交本地仓库
+git commit -m ""
+//提交到远程分支
+git push origin +分支名
+
+
+
+
