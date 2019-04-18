@@ -1,21 +1,22 @@
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 git init
-//É¾³ıÔ¶³ÌÁ¬½Ó
+//åˆ é™¤è¿œç¨‹è¿æ¥
 $ git remote rm origin
-//½¨Á¢Ô¶³ÌÁ¬½Ó
+//å»ºç«‹è¿œç¨‹è¿æ¥
 $ git remote add origin git@github.com:zxccong/eshop-myconfig.git
-//¸üĞÂÔ¶³Ì·ÖÖ§ĞÅÏ¢µ½±¾µØ
+//æ›´æ–°è¿œç¨‹åˆ†æ”¯ä¿¡æ¯åˆ°æœ¬åœ°
 $ git fetch origin
 
+//gitå¼ºåˆ¶ä¸‹è½½
+git pull origin master --allow-unrelated-histories
 
-
-//Ìí¼Ó
+//æ·»åŠ 
 git add *
 
-//Ìá½»±¾µØ²Ö¿â
+//æäº¤æœ¬åœ°ä»“åº“
 git commit -m ""
-//Ìá½»µ½Ô¶³Ì·ÖÖ§
-git push origin +·ÖÖ§Ãû
+//æäº¤åˆ°è¿œç¨‹åˆ†æ”¯
+git push origin +åˆ†æ”¯å
 
 
 
