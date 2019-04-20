@@ -19,5 +19,12 @@ git commit -m ""
 git push origin +分支名
 
 
+//回退版本
+//1.查看版本
+git log
+//2.设置回退版本
+git reset --hard 上面的版本id
+//3.提交回退设置
+git push origin HEAD --force
 
 
