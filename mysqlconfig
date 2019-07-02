@@ -1,0 +1,43 @@
+//备份yum源
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+
+//更换yum源
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+
+//刷新yum源
+yum makecache
+yum -y update
+
+//下载mysql rpm包
+# wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+ 
+//安装mysql rpm包
+# rpm -ivh mysql57-community-release-el7-11.noarch.rpm
+ 
+//安装mysql
+# yum install mysql-community-server
+
+//启动
+# service mysqld restart
+
+//查询默认密码
+grep "password" /var/log/mysqld.log
+
+//登陆
+mysql -uroot -p
+
+//设置密码安全性检查
+set global validate_password_policy=0; 
+
+//设置密码长度检查
+set global validate_password_length=1;
+
+//设置密码
+SET password=PASSWORD("123456");
+
+//允许访问
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+
+//保存更改
+FLUSH  PRIVILEGES;
+
