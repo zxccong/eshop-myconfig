@@ -34,6 +34,11 @@ skip-grant-tables
 flush privileges;
 
 更新密码
+flush privileges;
+
+update mysql.user set authentication_string=PASSWORD('123456') where User='root';
+flush privileges;
+
 update mysql.user set authentication_string=password('Pa$$word') where user='root' and Host = 'localhost';
 
 ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER; 
