@@ -1,3 +1,10 @@
+
+查詢是否安装过mysql 
+sc query mysql
+删除安装过的mysql 服务
+sc delete mysql
+
+
 my.ini
 [mysql]
 # 设置mysql客户端默认字符集
