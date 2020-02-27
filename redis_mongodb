@@ -1,0 +1,28 @@
+安装mongodb
+
+vim /etc/yum.repos.d/mongodb-org-3.4.repo
+#添加以下内容：
+[mongodb-org-3.4]  
+name=MongoDB Repository  
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/  
+gpgcheck=1  
+enabled=1  
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+
+#这里可以修改 gpgcheck=0, 省去gpg验证
+[root@localhost ~]# yum makecache  
+
+yum -y install mongodb-org
+whereis mongod
+#装好后直接到/usr/bin 指定data 启动即可
+cd /usr/bin
+nohup mongod --dbpath /var/lib/mongo/date >  mongo.log 2>&1 &
+
+redis 安装旧版本
+yum install -y redis
+cd /etc
+vi redis.conf
+
+1.修改保护模式 protected-mode 为 no
+2.修改bind 注释掉bind
+3.修改密码 requirepass 为需要的密码
