@@ -42,3 +42,19 @@ git config --global user.email "eamil@qq.com"
 //配置sshkey
 $ ssh-keygen -t rsa -C "1209252967@qq.com"
 
+
+1、git配置远程地址
+
+git remote add origin url ，其中url为远程仓库地址。
+
+
+
+2、git删除远程地址
+
+git remote rm origin
+
+
+
+查看远程仓库地址信息
+
+git remote -v
